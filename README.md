@@ -1,37 +1,22 @@
-# Syme Carpet Cleaning Website
+# Syme Cleaning website
 
-Next.js and Tailwind CSS website for Syme Carpet Cleaning.
+Production-ready Next.js website for Syme Cleaning. The quote form sends enquiries through Formspree.
 
-## Blog content
+## Run locally
 
-The Blog page lives at `/resources`.
-
-Starter posts are stored in `lib/blog.ts`. To connect another publishing platform later, set `BLOG_CMS_URL` to a JSON feed that returns either:
-
-```json
-[
-  {
-    "slug": "example-post",
-    "title": "Example post",
-    "excerpt": "Short summary",
-    "category": "Carpet Cleaning",
-    "date": "2026-06-17",
-    "readTime": "3 min read",
-    "keywords": ["Carpet Cleaning Christchurch"],
-    "sections": [
-      {
-        "heading": "Section heading",
-        "body": "Section body"
-      }
-    ]
-  }
-]
+```bash
+npm install
+npm run dev
 ```
 
-or:
+Open `http://localhost:3000`.
 
-```json
-{ "posts": [] }
-```
+## Deploy with GitHub and Vercel
 
-The blog refreshes hourly on Vercel, so daily posts from a connected platform can appear without redesigning the site.
+1. Create a new empty GitHub repository.
+2. Upload all files from this project, including the `app` and `public` folders.
+3. In Vercel, choose **Add New → Project**, import the GitHub repository and select **Deploy**.
+4. In the Vercel project, open **Settings → Domains** and add `symecleaning.co.nz`.
+5. Add the DNS records Vercel displays at the company that manages the domain.
+
+The Formspree endpoint is already configured in `app/quote-form.tsx`.

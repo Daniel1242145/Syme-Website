@@ -1,40 +1,38 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { DiscountPopup } from "@/components/DiscountPopup";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: {
-    default: "Syme Carpet Cleaning | Carpet Cleaning Christchurch",
-    template: "%s | Syme Carpet Cleaning",
-  },
-  description:
-    "Professional Carpet Cleaning Christchurch, Commercial Cleaning Christchurch, End of Tenancy Cleaning Christchurch, Upholstery Cleaning Christchurch and Window Cleaning Christchurch.",
   metadataBase: new URL("https://symecleaning.co.nz"),
+  title: {
+    default: "Syme Cleaning | Window, Carpet & Commercial Cleaning",
+    template: "%s | Syme Cleaning",
+  },
+  description: "Window, carpet and commercial cleaning across Christchurch, Kaiapoi, Rangiora, Lincoln and Rolleston.",
   openGraph: {
-    title: "Syme Carpet Cleaning Christchurch",
-    description:
-      "Premium carpet cleaning and property cleaning services across Christchurch, NZ.",
-    url: "https://symecleaning.co.nz",
-    siteName: "Syme Carpet Cleaning",
-    locale: "en_NZ",
-    type: "website",
+    title: "Syme Cleaning | Reliable cleaning. Easy booking.",
+    description: "Window, carpet and commercial cleaning across Christchurch and surrounding areas.",
+    images: ["/og.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Syme Cleaning | Reliable cleaning. Easy booking.",
+    description: "Window, carpet and commercial cleaning across Christchurch and surrounding areas.",
+    images: ["/og.png"],
+  },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en-NZ">
-      <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <DiscountPopup />
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
