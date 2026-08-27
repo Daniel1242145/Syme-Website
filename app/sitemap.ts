@@ -17,12 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
-    {
-      url: `${baseUrl}/offers/carpet-window-bundle`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
     ...servicePages.map((service) => ({
       url: `${baseUrl}/services/${service}`,
       lastModified: new Date(),
