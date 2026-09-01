@@ -2,6 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import QuoteForm from "../../quote-form";
 
+const reviews = [
+  ["A++ service! Daniel was great to deal with, very honest and upright with costs. He did an incredible job.", "Robyn Fereti-Noble"],
+  ["Amazing job done. Good clear communication, fair price and professional job standard.", "Hayley Walla"],
+  ["Highly recommend, great service and communication. Great value and an amazing result.", "Stella Smith"],
+  ["Super knowledgeable and efficient. Also, a really great price.", "Aeronwy Cording"],
+];
+
 const serviceData = {
   "window-cleaning": {
     eyebrow: "Residential & commercial",
@@ -67,6 +74,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <p>{service.intro}</p>
         <div className="service-price">{service.price}</div>
         <a className="button button-primary" href="#service-quote">Get a free quote →</a>
+      </section>
+
+      <section className="review-marquee" aria-label="Customer reviews">
+        <div className="review-track">
+          {[...reviews, ...reviews].map(([quote, name], index) => (
+            <article className="review-chip" key={`${name}-${index}`}><span className="stars" aria-hidden="true">★★★★★</span><p>“{quote}”</p><strong>{name}</strong></article>
+          ))}
+        </div>
       </section>
 
       <section className="service-detail">
