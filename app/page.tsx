@@ -12,6 +12,7 @@ const residentialServices = [
   ["01", "Window cleaning", "Interior, exterior and water-fed pole cleaning for homes and businesses.", "/services/window-cleaning"],
   ["02", "Carpet cleaning", "Professional carpet cleaning, deodorising and standard spot treatment.", "/services/carpet-cleaning"],
   ["03", "Upholstery cleaning", "Careful cleaning for sofas, chairs and other fabric furnishings.", "/services/upholstery-cleaning"],
+  ["04", "End of tenancy cleaning", "Full move-out cleaning with a bond-back cleaning guarantee, plus carpets and windows available.", "/end-of-tenancy-cleaning"],
 ];
 
 const faqs = [
@@ -36,7 +37,7 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow"><span className="status-dot" /> Residential cleaning across Christchurch</div>
           <h1>Windows. Carpets.<br /><span>Done properly.</span></h1>
-          <p>Professional window, carpet and upholstery cleaning for your home—with clear communication, honest pricing and results you can see.</p>
+          <p>Professional window, carpet, upholstery and full end-of-tenancy cleaning—with clear communication, honest pricing and results you can see.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#quote">Get a free quote <span aria-hidden="true">→</span></a>
             <a className="button button-quiet" href="#business">Need business cleaning?</a>
