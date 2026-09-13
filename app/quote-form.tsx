@@ -39,7 +39,7 @@ export default function QuoteForm() {
       <div className="form-row"><label>Name<input name="name" autoComplete="name" placeholder="Your name" required /></label><label>Phone<input name="phone" type="tel" autoComplete="tel" placeholder="021 123 4567" required /></label></div>
       <div className="form-row">
         <label>Service<select name="service" defaultValue="" required><option value="" disabled>Select a service</option><option>Window cleaning</option><option>Carpet cleaning</option><option>Commercial cleaning</option><option>Upholstery cleaning</option><option>More than one service</option></select></label>
-        <label>Area<select name="area" defaultValue="" required><option value="" disabled>Select your area</option><option>Christchurch</option><option>Kaiapoi</option><option>Rangiora</option><option>Lincoln</option><option>Rolleston</option><option>Another area</option></select></label>
+        <label>Address<input name="address" autoComplete="street-address" placeholder="Street address and suburb" required /></label>
       </div>
       <label>What would you like cleaned?<textarea name="details" rows={4} placeholder="For example: 3-bedroom single-storey home, windows inside and out…" /></label>
       <button className="button button-dark" type="submit" disabled={status === "submitting"}>{status === "submitting" ? "Sending your request…" : <>Get my free quote <span aria-hidden="true">→</span></>}</button>
