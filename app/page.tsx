@@ -9,10 +9,15 @@ const reviews = [
 ];
 
 const residentialServices = [
-  ["01", "Window cleaning", "Interior, exterior and water-fed pole cleaning for homes and businesses.", "/services/window-cleaning"],
+  ["01", "Windows & solar panels", "Residential window cleaning and solar panel cleaning, with water-fed pole equipment where suitable.", "/services/window-cleaning"],
   ["02", "Carpet cleaning", "Professional carpet cleaning, deodorising and standard spot treatment.", "/services/carpet-cleaning"],
   ["03", "Upholstery cleaning", "Careful cleaning for sofas, chairs and other fabric furnishings.", "/services/upholstery-cleaning"],
-  ["04", "End of tenancy cleaning", "Full move-out cleaning with a bond-back cleaning guarantee, plus carpets and windows available.", "/end-of-tenancy-cleaning"],
+  ["04", "Move-out cleaning", "End-of-tenancy and move-out cleaning, with carpets and windows available as add-ons.", "/end-of-tenancy-cleaning"],
+];
+
+const specialistServices = [
+  ["01", "Builders’ cleans", "Builders’ and handover cleaning for new builds and renovation projects."],
+  ["02", "Exterior washing", "House washing, paths and patios, and council bin cleaning."],
 ];
 
 const faqs = [
@@ -28,19 +33,19 @@ export default function Home() {
       <header className="site-header">
         <Link href="/" className="brand" aria-label="Syme Cleaning home"><span>SYME</span> CLEANING</Link>
         <nav className="desktop-nav" aria-label="Main navigation">
-          <a href="#services">For homes</a><a href="#business">For businesses</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+          <a href="#services">For homes</a><a href="#business">Commercial</a><a href="#projects">Builders & exterior</a><a href="#reviews">Reviews</a>
         </nav>
         <a className="header-phone" href="tel:0224221696">022 422 1696</a>
       </header>
 
       <section className="hero">
         <div className="hero-copy">
-          <div className="eyebrow"><span className="status-dot" /> Residential cleaning across Christchurch</div>
-          <h1>Windows. Carpets.<br /><span>Done properly.</span></h1>
-          <p>Professional window, carpet, upholstery and full end-of-tenancy cleaning—with clear communication, honest pricing and results you can see.</p>
+          <div className="eyebrow"><span className="status-dot" /> Christchurch cleaning specialists</div>
+          <h1>Specialist cleaning.<br /><span>Clear from the start.</span></h1>
+          <p>Home cleaning, regular commercial care, builders’ cleans and exterior washing—with straightforward quotes and one local point of contact.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#quote">Get a free quote <span aria-hidden="true">→</span></a>
-            <a className="button button-quiet" href="#business">Need business cleaning?</a>
+            <a className="button button-quiet" href="#services">Explore our services</a>
           </div>
           <div className="hero-proof">
             <span className="stars" aria-label="Five stars">★★★★★</span><span>5-star Google reviews</span><span className="proof-divider" /><span>Fully insured</span>
@@ -63,8 +68,8 @@ export default function Home() {
 
       <section className="section services-section" id="services">
         <div className="section-heading">
-          <div><span className="kicker">For your home</span><h2>The cleaning services people book us for.</h2></div>
-          <p>Start with the service you need today. Each page explains what is included, common pricing and the questions customers ask most.</p>
+          <div><span className="kicker">For your home</span><h2>Home cleaning, made simple.</h2></div>
+          <p>Choose the service you need. We’ll confirm what’s included and give you a clear quote before booking.</p>
         </div>
         <div className="service-grid residential-grid">
           {residentialServices.map(([number, title, description, href]) => (
@@ -78,22 +83,36 @@ export default function Home() {
       <section className="business-section" id="business">
         <div className="business-copy">
           <span className="kicker kicker-light">For Christchurch businesses</span>
-          <h2>Commercial cleaning you do not have to chase.</h2>
-          <p>Regular office, retail and facility cleaning with a written scope, flexible scheduling and one local point of contact.</p>
+          <h2>Commercial cleaning that fits your site.</h2>
+          <p>Regular workplace cleaning, with periodic carpet and window care and commercial hard-floor stripping and sealing when needed.</p>
           <div className="business-actions">
             <Link className="button business-button" href="/services/commercial-cleaning">Explore commercial cleaning <span aria-hidden="true">→</span></Link>
             <a className="business-text-link" href="#quote">Book a free site walkthrough</a>
           </div>
         </div>
         <div className="business-proof">
-          <strong>Built for reliable ongoing service</strong>
+          <strong>Reliable ongoing service</strong>
           <ul>
             <li><span>✓</span> Offices, retail and facilities</li>
-            <li><span>✓</span> After-hours scheduling available</li>
-            <li><span>✓</span> Fully insured and professionally equipped</li>
-            <li><span>✓</span> Windows and carpets available as add-ons</li>
+            <li><span>✓</span> Weekly or scheduled cleaning</li>
+            <li><span>✓</span> Written scope and one local contact</li>
+            <li><span>✓</span> Carpet, windows and hard floors</li>
           </ul>
           <div className="business-review"><span className="stars">★★★★★</span><p>“Good clear communication, fair price and professional job standard.”</p></div>
+        </div>
+      </section>
+
+      <section className="section specialist-section" id="projects">
+        <div className="section-heading">
+          <div><span className="kicker">Specialist services</span><h2>Projects and exterior care.</h2></div>
+          <p>For handovers, renovations and outdoor cleaning. Tell us what you need and we’ll confirm the scope before quoting.</p>
+        </div>
+        <div className="service-grid specialist-grid">
+          {specialistServices.map(([number, title, description]) => (
+            <a className="service-card" href="#quote" key={title}>
+              <span className="service-number">{number}</span><h3>{title}</h3><p>{description}</p><span className="service-link">Request a quote <span aria-hidden="true">→</span></span>
+            </a>
+          ))}
         </div>
       </section>
 
@@ -114,7 +133,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div><Link href="/" className="brand"><span>SYME</span> CLEANING</Link><p>Residential and commercial cleaning specialists.</p></div>
+        <div><Link href="/" className="brand"><span>SYME</span> CLEANING</Link><p>Home, commercial, builders’ and exterior cleaning in Christchurch.</p></div>
         <div className="footer-contact"><a href="tel:0224221696">022 422 1696</a><a href="mailto:daniel@symecleaning.co.nz">daniel@symecleaning.co.nz</a><span>Christchurch · Kaiapoi · Rangiora · Lincoln · Rolleston</span></div>
       </footer>
       <a className="mobile-cta" href="#quote">Get a free quote</a>
