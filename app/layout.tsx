@@ -5,13 +5,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://symecleaning.co.nz"),
   title: {
-    default: "Syme Cleaning | Home, Commercial & Specialist Cleaning",
+    default: "Syme Cleaning | Cleaning Services Christchurch",
     template: "%s | Syme Cleaning",
   },
-  description: "Home, commercial, builders’ and exterior cleaning across Christchurch, Kaiapoi, Rangiora, Lincoln and Rolleston.",
+  description: "Carpet, upholstery, window, move-out, builders’, commercial and exterior cleaning across Christchurch, Kaiapoi, Rangiora, Lincoln and Rolleston.",
   openGraph: {
     title: "Syme Cleaning | Specialist cleaning across Christchurch",
-    description: "Home, commercial, builders’ and exterior cleaning across Christchurch and surrounding areas.",
+    description: "Carpet, upholstery, window, move-out, builders’, commercial and exterior cleaning across Christchurch and surrounding areas.",
     images: ["/og.png"],
   },
   twitter: {
