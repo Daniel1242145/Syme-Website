@@ -38,10 +38,22 @@ export default function QuoteForm() {
       <input className="form-honeypot" type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <div className="form-row"><label>Name<input name="name" autoComplete="name" placeholder="Your name" required /></label><label>Phone<input name="phone" type="tel" autoComplete="tel" placeholder="021 123 4567" required /></label></div>
       <div className="form-row">
-        <label>Service<select name="service" defaultValue="" required><option value="" disabled>Select a service</option><option>Window cleaning</option><option>Carpet cleaning</option><option>Commercial cleaning</option><option>Upholstery cleaning</option><option>More than one service</option></select></label>
+        <label>Service<select name="service" defaultValue="" required>
+          <option value="" disabled>Select a service</option>
+          <optgroup label="Home cleaning">
+            <option>Carpet cleaning</option><option>Upholstery cleaning</option><option>Windows and solar panels</option><option>Move-out / end-of-tenancy cleaning</option>
+          </optgroup>
+          <optgroup label="Commercial cleaning">
+            <option>Regular commercial cleaning</option><option>Commercial carpet or window cleaning</option><option>Hard-floor stripping and sealing</option>
+          </optgroup>
+          <optgroup label="Projects and exterior">
+            <option>Builders’ clean</option><option>House washing</option><option>Paths, patios or council bins</option>
+          </optgroup>
+          <option>More than one service / not sure</option>
+        </select></label>
         <label>Address<input name="address" autoComplete="street-address" placeholder="Street address and suburb" required /></label>
       </div>
-      <label>What would you like cleaned?<textarea name="details" rows={4} placeholder="For example: 3-bedroom single-storey home, windows inside and out…" /></label>
+      <label>What would you like cleaned?<textarea name="details" rows={4} placeholder="A few details help us quote accurately…" /></label>
       <button className="button button-dark" type="submit" disabled={status === "submitting"}>{status === "submitting" ? "Sending your request…" : <>Get my free quote <span aria-hidden="true">→</span></>}</button>
       {status === "error" && <p className="form-error" role="alert">That did not send. Please try again, or call Daniel on <a href="tel:0224221696">022 422 1696</a>.</p>}
       <small>No spam. Just a helpful reply about your cleaning job.</small>
