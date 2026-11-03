@@ -9,15 +9,14 @@ const reviews = [
 ];
 
 const residentialServices = [
-  ["01", "Windows & solar panels", "Residential window cleaning and solar panel cleaning, with water-fed pole equipment where suitable.", "/services/window-cleaning"],
-  ["02", "Carpet cleaning", "Professional carpet cleaning, deodorising and standard spot treatment.", "/services/carpet-cleaning"],
-  ["03", "Upholstery cleaning", "Careful cleaning for sofas, chairs and other fabric furnishings.", "/services/upholstery-cleaning"],
-  ["04", "Move-out cleaning", "End-of-tenancy and move-out cleaning, with carpets and windows available as add-ons.", "/end-of-tenancy-cleaning"],
+  ["01", "Carpet & upholstery", "Professional carpet and fabric furniture cleaning for homes and workplaces.", "/services/carpet-cleaning"],
+  ["02", "Window cleaning", "Interior and exterior window cleaning for homes and businesses.", "/services/window-cleaning"],
+  ["03", "Move-out & end-of-tenancy", "Move-out cleaning, with carpet and window cleaning available as add-ons.", "/end-of-tenancy-cleaning"],
 ];
 
 const specialistServices = [
-  ["01", "Builders’ cleans", "Builders’ and handover cleaning for new builds and renovation projects."],
-  ["02", "Exterior washing", "House washing, paths and patios, and council bin cleaning."],
+  ["01", "Builders’ cleans", "Builders’ and handover cleaning for new builds and renovation projects.", "builders"],
+  ["02", "Exterior washing", "House washing, paths and patios, and council bin cleaning.", "exterior"],
 ];
 
 const faqs = [
@@ -33,7 +32,7 @@ export default function Home() {
       <header className="site-header">
         <Link href="/" className="brand" aria-label="Syme Cleaning home"><span>SYME</span> CLEANING</Link>
         <nav className="desktop-nav" aria-label="Main navigation">
-          <a href="#services">For homes</a><a href="#business">Commercial</a><a href="#projects">Builders & exterior</a><a href="#reviews">Reviews</a>
+          <a href="#services">Cleaning services</a><a href="#business">Commercial</a><a href="#builders">Builders’ cleans</a><a href="#exterior">Exterior washing</a>
         </nav>
         <a className="header-phone" href="tel:0224221696">022 422 1696</a>
       </header>
@@ -42,7 +41,7 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow"><span className="status-dot" /> Christchurch cleaning specialists</div>
           <h1>Specialist cleaning.<br /><span>Clear from the start.</span></h1>
-          <p>Home cleaning, regular commercial care, builders’ cleans and exterior washing—with straightforward quotes and one local point of contact.</p>
+          <p>Carpet and upholstery, windows, move-out cleans, builders’ cleans, commercial cleaning and exterior washing—with straightforward quotes and one local point of contact.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#quote">Get a free quote <span aria-hidden="true">→</span></a>
             <a className="button button-quiet" href="#services">Explore our services</a>
@@ -68,7 +67,7 @@ export default function Home() {
 
       <section className="section services-section" id="services">
         <div className="section-heading">
-          <div><span className="kicker">For your home</span><h2>Home cleaning, made simple.</h2></div>
+          <div><span className="kicker">Cleaning services</span><h2>Choose the service you need.</h2></div>
           <p>Choose the service you need. We’ll confirm what’s included and give you a clear quote before booking.</p>
         </div>
         <div className="service-grid residential-grid">
@@ -108,8 +107,8 @@ export default function Home() {
           <p>For handovers, renovations and outdoor cleaning. Tell us what you need and we’ll confirm the scope before quoting.</p>
         </div>
         <div className="service-grid specialist-grid">
-          {specialistServices.map(([number, title, description]) => (
-            <a className="service-card" href="#quote" key={title}>
+          {specialistServices.map(([number, title, description, anchor]) => (
+            <a className="service-card" id={anchor} href="#quote" key={title}>
               <span className="service-number">{number}</span><h3>{title}</h3><p>{description}</p><span className="service-link">Request a quote <span aria-hidden="true">→</span></span>
             </a>
           ))}
@@ -133,7 +132,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div><Link href="/" className="brand"><span>SYME</span> CLEANING</Link><p>Home, commercial, builders’ and exterior cleaning in Christchurch.</p></div>
+        <div><Link href="/" className="brand"><span>SYME</span> CLEANING</Link><p>Carpet, upholstery, window, move-out, builders’, commercial and exterior cleaning in Christchurch.</p></div>
         <div className="footer-contact"><a href="tel:0224221696">022 422 1696</a><a href="mailto:daniel@symecleaning.co.nz">daniel@symecleaning.co.nz</a><span>Christchurch · Kaiapoi · Rangiora · Lincoln · Rolleston</span></div>
       </footer>
       <a className="mobile-cta" href="#quote">Get a free quote</a>
