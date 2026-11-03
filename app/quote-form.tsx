@@ -41,7 +41,7 @@ export default function QuoteForm() {
         <label>Service<select name="service" defaultValue="" required>
           <option value="" disabled>Select a service</option>
           <optgroup label="Home cleaning">
-            <option>Carpet cleaning</option><option>Upholstery cleaning</option><option>Windows and solar panels</option><option>Move-out / end-of-tenancy cleaning</option>
+            <option>Carpet cleaning</option><option>Upholstery cleaning</option><option>Window cleaning</option><option>Move-out / end-of-tenancy cleaning</option>
           </optgroup>
           <optgroup label="Commercial cleaning">
             <option>Regular commercial cleaning</option><option>Commercial carpet or window cleaning</option><option>Hard-floor stripping and sealing</option>
