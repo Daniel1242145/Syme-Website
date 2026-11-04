@@ -47,7 +47,7 @@ export default function QuoteForm() {
             <option>Regular commercial cleaning</option><option>Commercial carpet or window cleaning</option><option>Hard-floor stripping and sealing</option>
           </optgroup>
           <optgroup label="Projects and exterior">
-            <option>Builders’ clean</option><option>House washing</option><option>Paths, patios or council bins</option>
+            <option>Builders’ clean</option><option>Paths, patios or council bins</option>
           </optgroup>
           <option>More than one service / not sure</option>
         </select></label>

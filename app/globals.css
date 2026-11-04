@@ -17,5 +17,11 @@ footer{max-width:1240px;margin:0 auto;padding:55px 28px 70px;display:flex;justif
 @media(max-width:680px){.site-header{height:70px;padding-inline:18px;grid-template-columns:1fr auto}.desktop-nav{display:none}.brand{font-size:19px}.header-phone{font-size:12px}.hero{min-height:auto;padding:50px 18px 55px}.hero h1{font-size:51px}.hero-copy>p{font-size:17px}.button{width:100%}.before-after{height:390px;border-radius:16px}.before-after figcaption{top:12px;left:12px}.review-chip{width:320px}.section{padding:78px 18px}.service-grid,.residential-grid{grid-template-columns:1fr}.service-card{min-height:235px}.service-card h3{margin-top:35px}.business-section{margin:0;padding:65px 18px;border-radius:0}.business-actions{align-items:stretch}.quote-section{margin:0;padding:68px 18px;border-radius:0}.form-row{grid-template-columns:1fr;gap:0}footer{padding:45px 18px 100px;flex-direction:column}.footer-contact{justify-items:start}.mobile-cta{position:fixed;z-index:20;right:12px;bottom:12px;left:12px;height:52px;display:grid;place-items:center;border-radius:8px;background:var(--blue);color:#fff;font-size:14px;font-weight:900;box-shadow:0 14px 34px rgba(0,0,0,.25)}.service-hero{padding:65px 18px 75px}.service-hero h1{font-size:60px}.service-detail{margin:0;padding:60px 18px;border-radius:0}.service-detail h2,.service-faq h2{font-size:38px}.service-faq{padding:75px 18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.review-track{animation:none}.button,.service-card{transition:none}}
 
-.specialist-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media(max-width:680px){.specialist-grid{grid-template-columns:1fr}}
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.project-card{overflow:hidden;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:#fff}
+.project-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.project-copy{padding:24px}
+.project-copy h3{margin:10px 0 8px;font-size:23px;letter-spacing:-.03em}
+.project-copy p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+@media(max-width:950px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.project-grid{grid-template-columns:1fr}}

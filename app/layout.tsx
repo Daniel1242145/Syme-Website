@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     default: "Syme Cleaning | Cleaning Services Christchurch",
     template: "%s | Syme Cleaning",
   },
-  description: "Carpet, upholstery, window, move-out, builders’, commercial and exterior cleaning across Christchurch, Kaiapoi, Rangiora, Lincoln and Rolleston.",
+  description: "Carpet, upholstery, window, move-out, builders’ and commercial cleaning across Christchurch, Kaiapoi, Rangiora, Lincoln and Rolleston.",
   openGraph: {
     title: "Syme Cleaning | Specialist cleaning across Christchurch",
-    description: "Carpet, upholstery, window, move-out, builders’, commercial and exterior cleaning across Christchurch and surrounding areas.",
+    description: "Carpet, upholstery, window, move-out, builders’ and commercial cleaning across Christchurch and surrounding areas.",
     images: ["/og.png"],
   },
   twitter: {
